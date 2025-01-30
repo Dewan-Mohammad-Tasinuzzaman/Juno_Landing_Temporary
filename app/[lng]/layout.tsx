@@ -31,7 +31,7 @@ const lato = Lato({
 
 // META-TAGS
 export const metadata: Metadata = {
-  title: "Juno Pharmaceuticals Corp.",
+  title: "Juno Pharma Canada",
   description: "Advancing The Healthcare of Canadians",
 };
 
