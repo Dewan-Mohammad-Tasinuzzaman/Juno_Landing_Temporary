@@ -126,7 +126,7 @@ export default function Home({ params: { lng } }: HomePageProps) {
             Your browser does not support the video tag. Time to switch!
           </video>
         )}
-        {/* <div className="banner-shadow"></div> */}
+        <div className="banner-shadow"></div>
       </section>
 
     </main>
