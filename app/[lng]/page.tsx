@@ -1,6 +1,7 @@
 'use client'; // Converted to client component
 
 import Image from "next/image";
+import React, { useRef, useState, useEffect } from 'react';
 import Link from "next/link";
 import styles from "./page.module.scss";
 import { useTranslation } from '../i18n/client';
@@ -39,12 +40,33 @@ export default function Home({ params: { lng } }: HomePageProps) {
   const { t } = useTranslation(lng, 'home-page');
 
   // Images for ParallaxBanner
-  const homeBannerImage = "/assets/images/home-banner-img.jpg";
+  const homeBannerImage = "/assets/images/home-banner-img.PNG";
 
   // Email Sending
   const handleEmailButtonClick = () => {
     window.location.href = 'mailto:' + 'junocare@junopharm.com';
   };
+
+  // Videos
+  const BlueSmoke_MP4_URL = "/assets/videos/blue_smoke_juno.mp4";
+  const BlueSmoke_WEBM_URL = "/assets/videos/blue_smoke_juno.webm";
+
+  // To Un-render Videos
+  const [screenWidth, setScreenWidth] = useState<number | null>(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    // Check if window is defined (client-side) before adding event listener
+    if (typeof window !== 'undefined') {
+      setScreenWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
+  }, []);
 
   return (
     <main className={styles.main}>
@@ -96,7 +118,15 @@ export default function Home({ params: { lng } }: HomePageProps) {
             ]}
             className="w-full aspect-2-1 hero__image"
         />
-        <div className="banner-shadow"></div>
+        {screenWidth && screenWidth > 650 && (
+          <video className="hero__video" autoPlay muted loop playsInline preload="true">
+            <source src={BlueSmoke_MP4_URL} type="video/mp4" />
+            <source src={BlueSmoke_WEBM_URL} type="video/webm" />
+            {/* Add more source elements for different formats if necessary */}
+            Your browser does not support the video tag. Time to switch!
+          </video>
+        )}
+        {/* <div className="banner-shadow"></div> */}
       </section>
 
     </main>
