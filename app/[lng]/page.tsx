@@ -7,23 +7,6 @@ import styles from "./page.module.scss";
 import { useTranslation } from '../i18n/client';
 import { ParallaxBanner } from "react-scroll-parallax";
 import External_Link_Icon from "@/public/assets/svgs/external-link_icon.svg";
-import HomeBannerImage from "@/public/assets/images/home-banner-img.jpg";
-import Logo_Icon_White from "@/public/assets/svgs/juno-logo-j-white.svg";
-import Logo_Icon_Blue from '@/public/assets/svgs/juno-care-icon-blue.svg';
-import Down_Arrow_White from "@/public/assets/svgs/down-arrow-icon.svg";
-import Video_Icon_White from "@/public/assets/svgs/video-icon.svg";
-import Custom_Separator_Corner from "@/public/assets/svgs/hero-custom-corner.svg";
-import About_Image from "@/public/assets/images/doctor_illustration.png";
-import Phone_Icon_White from '@/public/assets/svgs/contact-icon-white.svg';
-import Phone_Icon_Dark from '@/public/assets/svgs/contact-icon-dark.svg';
-import Email_Icon_Dark from '@/public/assets/svgs/email-icon.svg';
-import Live_Support_Icon_White from '@/public/assets/svgs/live-support_icon.svg';
-import Money_Icon_White from '@/public/assets/svgs/money_icon.svg';
-import Team_Icon_White from '@/public/assets/svgs/team_icon.svg';
-import Clinic_Icon_White from '@/public/assets/svgs/clinic_icon.svg';
-import Gear_Icon_White from '@/public/assets/svgs/gear_icon.svg';
-import Logo from '@/public/assets/svgs/juno_care_logo.svg';
-import Medical_Icon_White from '@/public/assets/svgs/medical-icon-white.svg';
 
 
 
